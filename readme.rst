@@ -1,15 +1,20 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="/asset/frontend/img/icon.png" width="100"></a></p>
-<h5 align="center">b@yu 4lex@ndr!4</h5>
+###################
+My Website Of Freamwork CodeIgniter
+###################
 
-## About Project
+Project ini adalah sebuah aplikasi web menggunakan freamwork CodeIgniter untuk membuatnya.
+Aplikasi web yaitu tentang Data diri pribadi seperti Porfolio maupun profile dan juga terdapat
+materi dan blog yang bisa ditambahkan, edit maupun hapus (CRUD) pada halaman admin.
 
-Ini adalah web application menggunakan freamwork CodeIgniter versi 3.11, web ini merupakan web posting blog dan portfolio untuk menjadi identitas bagi seorang programmer dan membagi pengalaman ngoding lewat blog:
+*******************
+Hasil Hosting
+*******************
 
-<!-- - [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting). -->
+`b@yu4lex@ndr!4 <http://bayuwardana.getenjoyment.net/>`_
 
+*******************
+URL
+*******************
+- Website `http://bayuwardana.getenjoyment.net/ <http://bayuwardana.getenjoyment.net/>`_
+- Admin `http://bayuwardana.getenjoyment.net/login <http://bayuwardana.getenjoyment.net/login>`_
+- Rest API `http://bayuwardana.getenjoyment.net/developer/Blog/index?key=b@yu4lex@ndr!4 <http://bayuwardana.getenjoyment.net/developer/Blog/index?key=b@yu4lex@ndr!4>`_
