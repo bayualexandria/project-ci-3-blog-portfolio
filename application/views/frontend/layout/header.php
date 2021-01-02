@@ -56,7 +56,7 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" target="_blank" href="https://github.com/bayualexandria/project-porfolio-project-laravel-8" onclick="scrollToDownload()">
+                        <a class="nav-link" target="_blank" href="https://github.com/bayualexandria/project-ci-3-blog-portfolio" onclick="scrollToDownload()">
                             <i class="material-icons">cloud_download</i> Download
                         </a>
                     </li>
