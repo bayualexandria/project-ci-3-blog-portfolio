@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sweet Alert</title>
+    <link rel="stylesheet" type="text/css" href="dist/sweetalert2.css">
+    <script type="text/javascript" src="dist/sweetalert2.all.js"></script>
+</head>
+
+<body>
+    <button onclick="normal()">Normal Alert</button>
+    <button onclick="sweet()">Sweet Alert</button>
+    <script>
+        function normal() {
+            Swal.fire('Any fool can use a computer')
+        }
+        function sweet() {
+            Swal.fire({
+                type:'success',
+               title: 'Pesan Telah Terkirim',
+                showConfirmButton: false,
+                timer: 1500
+            })
+        }
+    </script>
+</body>
+
+</html>
