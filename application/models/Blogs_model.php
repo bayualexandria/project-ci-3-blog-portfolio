@@ -20,6 +20,7 @@ class Blogs_model extends CI_Model
     {
          $this->db->order_by('created_at', 'DESC');
         $this->db->where('id_kategori',$id);
+        $this->db->where('is_active',1);
         return $this->db->get('blogs',$per_page,$start)->result_array();
     }
 

@@ -78,6 +78,7 @@ class Website extends CI_Controller
         $this->load->library('pagination');
         // Config
         $this->db->where('id_kategori',$materi['id']);
+        $this->db->where('is_active',1);
         $this->db->from('blogs');
         $config['base_url'] = "http://localhost/new/index.php/Website/materi/$kategori/";
         $config['total_rows'] = $this->db->count_all_results();
