@@ -17,7 +17,9 @@
                                 <div class="input-group">
                                     <input type="text" name="cari" autofocus class="form-control bg-light border-0 small" placeholder="Search for..." value="<?= $this->input->post('cari');?>" aria-label="Search" aria-describedby="basic-addon2" />
                                     <div class="input-group-append">
-                                        <input class="btn btn-secondary  btn-search" autocomplete="off" type="submit" name="submit" value="Search">
+                                        <button class="btn btn-primary" type="submit">
+                                            <i class="fas fa-search fa-sm"></i>
+                                        </button>
                                     </div>
                                 </div>
                             </form>

@@ -56,7 +56,7 @@ $route['404_override'] = '';
 $route['kategorimateri']='Website/kategorimateri';
 $route['materi/(:any)']='Website/materi/$1';
 $route['blog']='Website/blogs';
-$route['profile']='Website/profile';
+$route['portfolio']='Website/profile';
 $route['about']='Website/about';
 $route['detail/(:any)']='Website/detail/$1';
 

@@ -80,7 +80,7 @@
             </div>
             <div class="row justify-content-center">
 
-               <?php foreach($blogs as $blog):?>
+                <?php foreach($blogs as $blog):?>
                 <div class="col-md-4">
                     <div class="card">
                         <img src="<?= base_url('asset/backend/img/blogs/'.$blog['image']);?>" alt="" class="card-img-top" style="height: 200px;background-size: cover;" />
@@ -109,9 +109,11 @@
             <div class="row justify-content-center text-center">
                 <div class="profile">
                     <div class="avatar">
-                        
+                        <?php if(!empty($user['image'])):?>
                         <img src="<?= base_url('asset/backend/img/profile/'.$user['image']);?>" alt="Circle Image" class="img-raised rounded-circle img-fluid" style="width:20%" />
-                       
+                        <?php else:?>
+                        <img src="<?= base_url('asset/backend/img/profile/default.png');?>" alt="Circle Image" class="img-raised rounded-circle img-fluid" style="width:20%" />
+                        <?php endif;?>
                     </div>
                     <div class="name">
                         <h3 class="title"><?= $user['name']??'No Name' ?></h3>
@@ -126,7 +128,7 @@
                             <i class="fab fa-github text-dark"></i>
                         </a>
                     </div>
-                    <a href="<?= base_url('profile')?>" class="btn btn-info btn-sm">
+                    <a href="<?= base_url('portfolio')?>" class="btn btn-info btn-sm">
                         <i class="material-icons">remove_red_eye</i> Look me
                     </a>
                 </div>

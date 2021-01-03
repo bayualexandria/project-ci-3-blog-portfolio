@@ -1,4 +1,3 @@
-
 <div class="page-header header-filter dark-filter" data-parallax="true" style="background-image: url('<?= base_url('asset/frontend/img/profile_!.jpg') ?>');background-size: cover; background-position: center;"></div>
 <div class="main main-raised">
     <div class="profile-content">
@@ -7,10 +6,14 @@
                 <div class="col-md-6 ml-auto mr-auto">
                     <div class="profile">
                         <div class="avatar">
-                            <img src="" alt="Circle Image" class="img-raised rounded-circle img-fluid">
+                            <?php if(!empty($user['image'])):?>
+                            <img src="<?= base_url('asset/backend/img/profile/'.$user['image']);?>" alt="Circle Image" class="img-raised rounded-circle img-fluid">
+                            <?php else:?>
+                            <img src="<?= base_url('asset/backend/img/profile/default.png');?>" alt="Circle Image" class="img-raised rounded-circle img-fluid">
+                            <?php endif;?>
                         </div>
                         <div class="name">
-                            <h3 class="title">Name</h3>
+                            <h3 class="title"><?= $user['name']??'No Name';?></h3>
                             <h6>Web Programming & Computer Networking</h6>
                             <a href="https://api.whatsapp.com/send?phone=6281316146399" target="_blank" class="btn btn-just-icon btn-link">
                                 <i class="fab fa-whatsapp text-success"></i>

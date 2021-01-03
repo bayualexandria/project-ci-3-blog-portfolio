@@ -65,18 +65,32 @@ class Website extends CI_Controller
             'title' => 'Halaman Blogs',
             'css' => 'profile-page'
         ]);
-        $this->load->view('frontend/blogs', ['blogs' => $this->Blogs->getAll($config['per_page'], $data['start'], $data['cari']),'csrf'=>$this->csrf]);
+        $this->load->view('frontend/blogs', ['blogs' => $this->Blogs->getAll($config['per_page'], $data['start'], $data['cari']), 'csrf' => $this->csrf]);
         $this->load->view('frontend/layout/footer');
     }
 
     public function materi($kategori)
     {
         $materi = $this->db->get_where('kategori', ['kategori' => $kategori])->row_array();
+
+
+        // Pagination
+        $this->load->library('pagination');
+        // Config
+        $this->db->where('id_kategori',$materi['id']);
+        $this->db->from('blogs');
+        $config['base_url'] = "http://localhost/new/index.php/Website/materi/$kategori/";
+        $config['total_rows'] = $this->db->count_all_results();
+        $config['per_page'] = 1;
+        // Initialize
+        $this->pagination->initialize($config);
+
+        $data['start'] = $this->uri->segment(4);
         $this->load->view('frontend/layout/header', [
             'title' => 'Halaman Materi',
             'css' => 'profile-page'
         ]);
-        $this->load->view('frontend/materi', ['blogs' => $this->Blogs->getMateri($materi['id'])]);
+        $this->load->view('frontend/materi', ['blogs' => $this->Blogs->getMateri($materi['id'],$config['per_page'],$data['start'])]);
         $this->load->view('frontend/layout/footer');
     }
 
@@ -110,6 +124,6 @@ class Website extends CI_Controller
 
     public function about()
     {
-        $this->load->view('frontend/about');
+        $this->load->view('frontend/about', ['user' => $this->user]);
     }
 }

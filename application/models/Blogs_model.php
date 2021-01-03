@@ -16,13 +16,11 @@ class Blogs_model extends CI_Model
         return $this->db->get('blogs',$per_page,$start)->result_array();
     }
 
-    public function getMateri($id)
+    public function getMateri($id,$per_page,$start)
     {
-        $this->db->select('*');
-        $this->db->from('blogs');
-        $this->db->join('kategori', 'kategori.id = blogs.id_kategori');
-        $this->db->where('id_kategori', $id);
-        return $this->db->get()->result_array();
+         $this->db->order_by('created_at', 'DESC');
+        $this->db->where('id_kategori',$id);
+        return $this->db->get('blogs',$per_page,$start)->result_array();
     }
 
     public function get($per_page, $start, $keyword = null)

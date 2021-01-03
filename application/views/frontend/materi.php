@@ -38,8 +38,8 @@
                 <?php endif;?>
                 <?php endforeach;?>
             </div>
-            <div class="row justify-content-center mt-5">
-                Pagination
+            <div class="row justify-content-center">
+                <?= $this->pagination->create_links(); ?>
             </div>
         </div>
     </div>

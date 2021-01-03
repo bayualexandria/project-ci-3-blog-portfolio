@@ -31,13 +31,15 @@
                         </a>
                     </div>
                     <div class="card-body text-center mt-5 p-0">
-         
-                        <img src="" alt="" class="rounded-circle w-25">
-
-                        <h4 class="text-bold">Name</h4>
-                        <h5 class="text-muted">Email</h5>
+                        <?php if(!empty($user['image'])):?>
+                        <img src="<?= base_url('asset/backend/img/profile/'.$user['image']);?>" alt="" class="rounded-circle w-25">
+                        <?php else:?>
+                        <img src="<?= base_url('asset/backend/img/profile/default.png');?>" alt="" class="rounded-circle w-25">
+                        <?php endif;?>
+                        <h4 class="text-bold"><?= $user['name']??'No name';?></h4>
+                        <h5 class="text-muted"><?= $user['email']??'No email';?></h5>
                         <p>
-                            Website ini menggunakan freamwork Laravel versi 8 untuk pembuatanya
+                            Website ini menggunakan freamwork CodeIgniter versi 3.11 untuk pembuatanya
                         </p>
                     </div>
                 </div>

@@ -19,7 +19,7 @@ class Content extends CI_Controller
     public function blogs()
     {
         // ambil data cari
-        if ($this->input->post('submit')) {
+        if ($this->input->method('POST')) {
             $data['cari'] = $this->input->post('cari');
             $this->session->set_userdata('cari', $data['cari']);
         } else {
@@ -137,7 +137,7 @@ class Content extends CI_Controller
 
         if ($this->form_validation->run() == false) {
             // ambil data cari
-            if ($this->input->post('submit')) {
+            if ($this->input->method('POST')) {
                 $data['cari'] = $this->input->post('cari');
                 $this->session->set_userdata('cari', $data['cari']);
             } else {
