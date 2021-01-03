@@ -81,6 +81,7 @@
             <div class="row justify-content-center">
 
                 <?php foreach($blogs as $blog):?>
+                <?php if($blog['is_active']==1):?>
                 <div class="col-md-4">
                     <div class="card">
                         <img src="<?= base_url('asset/backend/img/blogs/'.$blog['image']);?>" alt="" class="card-img-top" style="height: 200px;background-size: cover;" />
@@ -95,6 +96,7 @@
                         </div>
                     </div>
                 </div>
+                <?php endif;?>
                 <?php endforeach;?>
 
             </div>

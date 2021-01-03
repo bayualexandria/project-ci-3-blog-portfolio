@@ -87,10 +87,10 @@
 
 <script>
     var options = {
-        filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
-        filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&_token=',
-        filebrowserBrowseUrl: '/laravel-filemanager?type=Files',
-        filebrowserUploadUrl: '/laravel-filemanager/upload?type=Files&_token=',
+        filebrowserBrowseUrl: '<?= base_url('asset/backend/vendor/ckfinder/ckfinder.html');?>',
+        filebrowserImageBrowseUrl: '<?= base_url('asset/backend/vendor/ckfinder/ckfinder.html?Type=Images');?>',
+        filebrowserUploadUrl: '<?= base_url('asset/backend/vendor/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files');?>',
+        filebrowserImageUploadUrl:'<?= base_url('asset/backend/vendor/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images')?>',
         extraPlugins: 'codesnippet',
         codeSnippet_theme: 'monokai_sublime'
     };

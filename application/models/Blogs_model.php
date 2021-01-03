@@ -97,7 +97,6 @@ class Blogs_model extends CI_Model
             'isi' => $this->input->post('isi'),
             'id_kategori' => $this->input->post('id_kategori'),
             'is_active' => $this->input->post('is_active'),
-            'created_at' => time()
         ];
 
         $this->db->set($data);
