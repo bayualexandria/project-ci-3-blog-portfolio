@@ -87,10 +87,10 @@
 
 <script>
     var options = {
-        filebrowserBrowseUrl: '<?= base_url('asset/backend/vendor/ckfinder/ckfinder.html');?>',
-        filebrowserImageBrowseUrl: '<?= base_url('asset/backend/vendor/ckfinder/ckfinder.html?Type=Images');?>',
-        filebrowserUploadUrl: '<?= base_url('asset/backend/vendor/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files');?>',
-        filebrowserImageUploadUrl:'<?= base_url('asset/backend/vendor/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images')?>',
+        filebrowserBrowseUrl: 'asset/backend/vendor/ckfinder/ckfinder.html',
+        filebrowserImageBrowseUrl: 'asset/backend/vendor/ckfinder/ckfinder.html?Type=Images',
+        filebrowserUploadUrl: 'asset/backend/vendor/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+        filebrowserImageUploadUrl:'asset/backend/vendor/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
         extraPlugins: 'codesnippet',
         codeSnippet_theme: 'monokai_sublime'
     };

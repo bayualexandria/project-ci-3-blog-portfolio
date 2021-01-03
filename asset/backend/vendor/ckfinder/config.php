@@ -66,7 +66,7 @@ $config['images'] = array(
 $config['backends'][] = array(
     'name'         => 'default',
     'adapter'      => 'local',
-    'baseUrl'      => '/ckfinder/userfiles/',
+    'baseUrl'      => 'http://localhost/new/asset/backend/vendor/ckfinder/userfiles/',
 //  'root'         => '', // Can be used to explicitly set the CKFinder user files directory.
     'chmodFiles'   => 0777,
     'chmodFolders' => 0755,
@@ -127,7 +127,7 @@ $config['accessControl'][] = array(
 
 $config['overwriteOnUpload'] = false;
 $config['checkDoubleExtension'] = true;
-$config['disallowUnsafeCharacters'] = false;
+$config['disallowUnsafeCharacters'] = true;
 $config['secureImageUploads'] = true;
 $config['checkSizeAfterScaling'] = true;
 $config['htmlExtensions'] = array('html', 'htm', 'xml', 'js');
